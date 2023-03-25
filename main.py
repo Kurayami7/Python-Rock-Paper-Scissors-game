@@ -22,7 +22,7 @@ def gameW(comp, user):
 
 
 print("Computer's Turn.\n Options: 1. Rock(r) 2. Paper(p) 3. Scissors(s)")
-print("***** ***** ***** ***** *****")
+print("\n***** ***** ***** ***** *****")
 rand = random.randint(1, 3)
 if rand == 1:
     comp = "r"
@@ -31,15 +31,18 @@ elif rand == 2:
 elif rand == 3:
     comp = "s"
 
-userInput = input("Your turn.\n Options: 1. Rock(r) 2. Paper(p) 3. Scissors(s)\n")
+userInput = input("Your turn! Please enter an option:\nR for Rock \nP for Paper \nS for Scissors (don't worry, we are not back in school) :D \nYour entry: ")
 a = gameW(comp, userInput)
 
-print(f"Computer picked {comp}")
+print("***** ***** ***** ***** *****")
+print(f"\nComputer picked {comp}")
 print(f"You picked {userInput}")
 
 if a == None:
     print("This round has resulted in a tie as you have matched comp's choice")
-elif a:
+elif a:        # This elif only gets executed when a is true
     print("You have won this round!")
 else:
     print("You have lost this round!")
+
+print("***** ***** ***** ***** *****")
